@@ -1,0 +1,23 @@
+# Environment & Secrets
+.env
+
+# Python Virtual Environment & Cache
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Database Data & Runtime Logs
+postgres/data/
+airflow/logs/
+airflow/*.pid
+airflow/*.cfg
+
+# dbt Artifacts
+dbt/my_project/target/
+dbt/my_project/dbt_packages/
+dbt/my_project/logs/
+
+# OS & Editor
+.DS_Store
+.vscode/

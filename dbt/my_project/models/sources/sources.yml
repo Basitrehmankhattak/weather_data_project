@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: dev
+    description: "This source contains weather data from various locations."
+    tables:
+      - name: raw_weather_data
+        description: "This table contains weather observations including temperature, humidity, and precipitation."
+        columns:
+          - name: id
+            description: "Unique identifier for each weather observation."
+          - name: city
+            description: "The location where the observation was recorded."
+          - name: temperature
+            description: "The timestamp of when the observation was made."
+          - name: weather_descriptions
+            description: "The recorded weather description."
+          - name: time
+            description: "The recorded time ."
+          - name: inserted_at
+            description: "The timestamp of when the observation was made."
+          - name: utc_offset
+            description: "The UTC offset for the location of the observation."
+            
