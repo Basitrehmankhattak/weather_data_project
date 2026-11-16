@@ -21,6 +21,7 @@ An end-to-end, containerized ELT data platform that ingests live meteorological 
                                      (Live Metrics & Pipeline Health)
 
                    [ Orchestrated by Apache Airflow (DockerOperator) ]
+> **Pipeline Run Metrics:** Ingests live Weatherstack API snapshots into `PostgreSQL 14` (`29` raw records $\rightarrow$ `29` deduplicated report rows & daily KPI aggregations), materializes `3` staging/mart models (`stg_weather_data`, `weather_report`, `daily_average`), and passes `12/12` automated `dbt build` data-quality tests (`1` `unique`, `11` `not_null`) in `2.5s` (`~8s` average end-to-end Airflow DAG runtime with `0` failed runs).
 
 ## Tech Stack
 * **Ingestion:** Python (`requests`, `psycopg2`)
